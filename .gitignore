@@ -1,0 +1,30 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor / IDE configuration
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build and package artifacts
+*.zip
+*.tar.gz
+*.rar
+
+# Logs & databases
+*.log
+*.sql
+*.sqlite
+
+# Temporary & node
+node_modules/
+.npm/
+tmp/

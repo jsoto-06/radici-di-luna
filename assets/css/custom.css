@@ -1,0 +1,217 @@
+/* Nocturne Aurum Theme Enhancements */
+
+/* Luxury Fonts */
+.font-display-hero {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+.font-headline-lg {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+}
+.font-headline-md {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+}
+.font-headline-sm {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+}
+.font-title-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+.font-body-lg {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+}
+.font-body-md {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+}
+.font-body-sm {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+}
+.font-label-caps {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+/* Luxury Glows and Shadows */
+.glow-gold-sm {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+.glow-gold-md {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.22);
+}
+.glow-gold-lg {
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.35);
+}
+
+/* Gold Gradient Borders */
+.border-gold-subtle {
+  border: 1px solid rgba(212, 175, 55, 0.22);
+}
+.border-gold-medium {
+  border: 1px solid rgba(212, 175, 55, 0.45);
+}
+.border-gold-accent {
+  border: 1px solid #d4af37;
+}
+
+/* Details & Accordion */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+}
+details[open] summary .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* Responsive Mobile Navigation Drawer */
+#mobile-drawer {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+#mobile-drawer.drawer-closed {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+#mobile-drawer.drawer-open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#mobile-backdrop {
+  transition: opacity 0.3s ease;
+}
+#mobile-backdrop.backdrop-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+#mobile-backdrop.backdrop-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile Bottom Quick-Action Bar */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 70px; /* Space for bottom quick action bar */
+  }
+}
+
+.mobile-bottom-bar {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-bottom-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    z-index: 45;
+    background: rgba(20, 19, 17, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+    padding: 8px 16px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+
+/* Modal styling */
+.modal-backdrop {
+  background: rgba(15, 14, 12, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Image Hover Zoom effect */
+.img-zoom-wrapper {
+  overflow: hidden;
+}
+.img-zoom-wrapper img {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.img-zoom-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Text Shimmer Effect */
+.gold-shimmer-text {
+  background: linear-gradient(135deg, #f5efe6 0%, #d4af37 50%, #f2ca50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cookie Banner & Preferences Modal */
+#rdl-cookie-banner {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+#rdl-cookie-banner.cb-hidden {
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+}
+#rdl-cookie-banner.cb-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Luxury Toggle Switch for Cookie Categories */
+.rdl-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.rdl-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.rdl-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #24221f;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 24px;
+}
+.rdl-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #a89f91;
+  transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 50%;
+}
+input:checked + .rdl-slider {
+  background-color: rgba(212, 175, 55, 0.25);
+  border-color: #d4af37;
+}
+input:checked + .rdl-slider:before {
+  transform: translateX(20px);
+  background-color: #d4af37;
+}
+input:disabled + .rdl-slider {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
